@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13241" systemVersion="17B48" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Employe" representedClassName=".Employe" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shouts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Shout" inverseName="toemploye" inverseEntity="Shout" syncable="YES"/>
+    </entity>
+    <entity name="Shout" representedClassName=".Shout" syncable="YES">
+        <attribute name="catagory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="from" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toemploye" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employe" inverseName="shouts" inverseEntity="Employe" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Employe" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Shout" positionX="-54" positionY="-9" width="128" height="105"/>
+    </elements>
+</model>
